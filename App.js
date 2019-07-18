@@ -78,13 +78,14 @@ class App extends React.Component{
     render() {
         return (
             <div className="wrapper">
-                <div className="main">
+                <div className="main">                  
                 <div className="container">
+                <div className=" info">
+                        <Info/>
                     <div className="row">
-                        <div className="col-sm-5 info">
-                            <Info />
-                         </div>
-                        <div className="col-sm-7 form">
+                    
+
+                        <div className="col-sm-9 form">
                             <Form weatherMethod={this.gettingWeather} />
                             <Weather 
                             temp={this.state.temp}
@@ -98,6 +99,8 @@ class App extends React.Component{
                             
                             error={this.state.error}
                             />
+                            
+                        </div>
                         </div>
                     </div>   
                 </div>
